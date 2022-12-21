@@ -93,8 +93,18 @@ spec:
     workspaces:
       - name: source
         workspace: git-repo
-  - name: print-build-success
+  - name: deploy-artifact-to-ibm-cloud-functions
     taskRef:
-      name: print-build-success
+      name: deploy-artifact-to-ibm-cloud-functions
     runAfter:
       - build-artifact-from-source
+    params:
+    - name: path-to-manifest-file
+      value: $(params.path-to-manifest-file)
+    - name: ibm-cloud-region
+      value: $(params.ibm-cloud-region)
+    - name: api-url
+      value: $(params.api-url)
+    workspaces:
+      - name: source
+        workspace: git-repo
