@@ -14,7 +14,7 @@ spec:
       default: cloud.ibm.com
     - name: cf-deprecation-message
       description: CF deprecation message. And suggestion to use Code Engine
-      default: CF is deprecated. Deployment through Cloud IDE using Code Engine can be attempted.
+      default: CF is deprecated. Deployment through Cloud IDE using Code Engine can be attempted for paid cloud members.
   workspaces:
     - name: source
   steps:
