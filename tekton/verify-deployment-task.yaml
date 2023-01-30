@@ -12,4 +12,4 @@ spec:
       image: ubuntu
       command: ["/bin/bash", "-c"]
       args:
-        - echo $(verification-message)
+        - echo $(params.verification-message)
